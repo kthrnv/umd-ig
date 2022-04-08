@@ -1,5 +1,30 @@
-/* About page */
-#header{
-    background: url(/assets/img/M_Circle.jpg) top/cover no-repeat;
+/* --------------- About page --------------- */
+/* Background image */
+.about-bg { 
+    opacity: 0.7;
+    background: url(/assets/img/about/umd-building.jpeg) top/cover no-repeat;
 }
-/* Career Services page */
+
+/* Add rounded edges to image */
+#our-comm { 
+    border-radius: 12px;
+}
+
+/* Resize the logos of partners smaller */
+#logo { 
+    width: 120px;
+}
+
+/* --------------- Community events page --------------- */
+/* Background image */
+.events-bg { 
+    opacity: 0.7;
+    background: url(/assets/img/events/campus-blue-skies.jpeg) top/cover no-repeat;
+}
+
+/* Lower opacity of images */
+.card-img-top { 
+    opacity: 0.8;
+}
+
+/* --------------- Career Services page --------------- */
