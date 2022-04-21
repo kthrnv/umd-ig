@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/resources.css">
 
     <title>UMD Inclusive Growth</title>
   </head>
@@ -48,13 +50,40 @@
 
     <!-- CONTENT -->
     <div class="container mt-5 pt-5">
-        <h2>Resources</h2>
+        <div class="row">
+            <div class="col">
+                <h2>Resources</h2>
+            </div>
+            <div class="col">
+                <!-- Search -->
+                <form class="form-inline d-flex justify-content-end">
+                    <input class="form-control mr-4" type="search" id="myInput" onkeyup="searchFunction()" placeholder="Search for resources" aria-label="Search for resources">
+                    <!-- Filter embeded in the Search code so that the buttons appear side by side -->
+                    <div class="dropdown show">
+                        <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Filter
+                        </a>
+                    
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" id="filterContainer">
+                            <a class="dropdown-item active" onclick="filterSelection('all');">All</a>
+                            <a class="dropdown-item" onclick="filterSelection('education');">Education</a>
+                            <a class="dropdown-item" onclick="filterSelection('employment');">Employment</a>
+                            <a class="dropdown-item" onclick="filterSelection('family');">Family</a>
+                            <a class="dropdown-item" onclick="filterSelection('housing');">Housing</a>
+                            <a class="dropdown-item" onclick="filterSelection('healthcare');">Healthcare</a>
+                            <a class="dropdown-item" onclick="filterSelection('transportation');">Transportation</a>
+                            <a class="dropdown-item" onclick="filterSelection('entrepreneurship');">Entrepreneurship</a>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- end col -->
+        </div><!--end row-->
 
         <!-- CARDS -->
         <div class="container mt-3">
-            <div class="row row-cols-1 row-cols-sm-3 mb-4">
+            <div class="row row-cols-1 row-cols-sm-3 mb-4" id="myList">
                 <!-- Card 1 -->
-                <div class="col-12 col-sm-4 mb-4">
+                <div class="col-12 col-sm-4 mb-4 filterDiv healthcare housing">
                     <div class="card">
                         <img class="card-img-top" src="assets/img/resources/backs-friends.jpeg" alt="4H Photo">
                         <div class="card-body">
@@ -67,7 +96,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="col-12 col-sm-4 mb-4">
+                <div class="col-12 col-sm-4 mb-4 filterDiv education">
                     <div class="card">
                         <img class="card-img-top" src="assets/img/resources/AA-student-program.png" alt="AAP: Educational Opportunity Center Photo">
                         <div class="card-body">
@@ -80,7 +109,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="col-12 col-sm-4 mb-4">
+                <div class="col-12 col-sm-4 mb-4 filterDiv education">
                     <div class="card">
                         <img class="card-img-top" src="assets/img/resources/friends-together.jpeg" alt="AAP: Summer Transition Program Photo">
                         <div class="card-body">
@@ -93,7 +122,7 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="col-12 col-sm-4 mb-4">
+                <div class="col-12 col-sm-4 mb-4 filterDiv education">
                     <div class="card">
                         <img class="card-img-top" src="assets/img/resources/group-hug.jpeg" alt="AAP: Talent Search Program Photo">
                         <div class="card-body">
@@ -106,7 +135,7 @@
                 </div>
 
                 <!-- Card 5 -->
-                <div class="col-12 col-sm-4 mb-4">
+                <div class="col-12 col-sm-4 mb-4 filterDiv housing">
                     <div class="card">
                         <img class="card-img-top" src="assets/img/resources/lecture-students.jpeg" alt="Affordable Housing Research Photo">
                         <div class="card-body">
@@ -119,7 +148,7 @@
                 </div>
 
                 <!-- Card 6 -->
-                <div class="col-12 col-sm-4 mb-4">
+                <div class="col-12 col-sm-4 mb-4 filterDiv education transportation">
                     <div class="card">
                         <img class="card-img-top" src="assets/img/resources/computer-lab.jpeg" alt="African American History, Culture and Digital Humanities Initiative Photo">
                         <div class="card-body">
@@ -132,7 +161,7 @@
                 </div>
 
                 <!-- Card 7 -->
-                <div class="col-12 col-sm-4 mb-4">
+                <div class="col-12 col-sm-4 mb-4 filterDiv education">
                     <div class="card">
                         <img class="card-img-top" src="assets/img/resources/computer-lab.jpeg" alt="SPAN374 Photo">
                         <div class="card-body">
@@ -145,7 +174,7 @@
                 </div>
 
                 <!-- Card 8 -->
-                <div class="col-12 col-sm-4 mb-4">
+                <div class="col-12 col-sm-4 mb-4 filterDiv healthcare housing">
                     <div class="card">
                         <img class="card-img-top" src="assets/img/resources/elementary-schoolers.jpeg" alt="Alternative Breaks Photo">
                         <div class="card-body">
@@ -158,7 +187,7 @@
                 </div>
 
                 <!-- Card 9 -->
-                <div class="col-12 col-sm-4 mb-4">
+                <div class="col-12 col-sm-4 mb-4 filterDiv education healthcare housing">
                     <div class="card">
                         <img class="card-img-top" src="assets/img/resources/judge-center.jpeg" alt="Aquaculture Photo">
                         <div class="card-body">
@@ -171,7 +200,7 @@
                 </div>
 
                 <!-- Card 10 -->
-                <div class="col-12 col-sm-4 mb-4">
+                <div class="col-12 col-sm-4 mb-4 filterDiv family entrepreneurship housing transportation">
                     <div class="card">
                         <img class="card-img-top" src="assets/img/resources/lecture-students.jpeg" alt="ARCH School Research Photo">
                         <div class="card-body">
@@ -188,7 +217,7 @@
                 </div>
 
                 <!-- Card 11 -->
-                <div class="col-12 col-sm-4 mb-4">
+                <div class="col-12 col-sm-4 mb-4 filterDiv education">
                     <div class="card">
                         <img class="card-img-top" src="assets/img/resources/man-working.jpeg" alt="Architecture Program Photo">
                         <div class="card-body">
@@ -201,7 +230,7 @@
                 </div>
 
                 <!-- Card 12 -->
-                <div class="col-12 col-sm-4 mb-4">
+                <div class="col-12 col-sm-4 mb-4 filterDiv family entrepreneurship transportation">
                     <div class="card">
                         <img class="card-img-top" src="assets/img/resources/medical.jpeg" alt="BALTO Photo">
                         <div class="card-body">
@@ -215,44 +244,8 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Card Template
-                <div class="col-12 col-sm-4 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="assets/img/resources/team-hands-field.jpeg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Org Name</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-dark" target="_blank">Learn More</a>
-                        </div>
-                    </div>
-                </div>-->
 
-                <!-- Card Template
-                <div class="col-12 col-sm-4 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="assets/img/resources/judge-center.jpeg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Org Name</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-dark" target="_blank">Learn More</a>
-                        </div>
-                    </div>
-                </div>-->
-
-                <!-- Card Template
-                <div class="col-12 col-sm-4 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="assets/img/resources/team-meeting.jpeg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Org Name</h5>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="btn btn-dark" target="_blank">Learn More</a>
-                        </div>
-                    </div>
-                </div> -->
-
-            </div>
+            </div><!--end row-->
         </div><!--end cards container-->
 
         <!--PAGINATION-->
@@ -296,5 +289,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/js/resources.js"></script><!--Filtering function-->
   </body>
 </html>
