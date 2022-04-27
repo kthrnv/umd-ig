@@ -1,7 +1,7 @@
 /* --------------- About page --------------- */
 /* Background image */
 .about-bg { 
-    opacity: 0.7;
+    opacity: 0.8;
     background: url(/assets/img/about/umd-building.jpeg) top/cover no-repeat;
 }
 
@@ -15,10 +15,10 @@
     width: 120px;
 }
 
-/* --------------- Community events page --------------- */
+/* --------------- Find events page --------------- */
 /* Background image */
 .events-bg { 
-    opacity: 0.7;
+    opacity: 0.8;
     background: url(/assets/img/events/campus-blue-skies.jpeg) top/cover no-repeat;
 }
 
