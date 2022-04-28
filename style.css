@@ -6,7 +6,7 @@
 /* Background image */
 .about-bg { 
     opacity: 0.8;
-    background: url(/assets/img/about/umd-building.jpeg) top/cover no-repeat;
+    background: url(assets/img/about/umd-building.jpeg) top/cover no-repeat;
 }
 
 /* Add rounded edges to image */
@@ -23,7 +23,7 @@
 /* Background image */
 .events-bg { 
     opacity: 0.8;
-    background: url(/assets/img/events/campus-blue-skies.jpeg) top/cover no-repeat;
+    background: url(assets/img/events/campus-blue-skies.jpeg) top/cover no-repeat;
 }
 
 /* Lower opacity of images */
