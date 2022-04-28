@@ -61,7 +61,7 @@ function searchFunction() {
   input = document.getElementById('myInput');
   filter = input.value.toUpperCase();
   row = document.getElementById("myList");
-  col = row.getElementsByClassName('card');
+  col = row.getElementsByClassName('col-12');
 
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < col.length; i++) {
