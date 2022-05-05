@@ -3,7 +3,7 @@
 
 Previously known as "UMD Inclusive Growth" for INST490 Spring 2022 Capstone.
 
-The UMD Inclusive Impact Website is dedicated to compiling a hub of resources for underrepresented groups in areas including College Park, PG County, and Maryland broadly. Their initiatives include resources for career development, family support, employment, entrepreneurship, healthcare, sustainable housing, and transportation resources for community members. 
+The UMD Inclusive Impact Website is dedicated to compiling a hub of resources for underrepresented groups in areas including College Park, PG County, and Maryland broadly. Their initiatives include resources for career development, family support &employment, entrepreneurship, healthcare, sustainable housing, and transportation resources for community members. 
 
 The website uses HTML, CSS, and JavaScript. Most of the interface components and screen responsiveness is handled using the Bootstrap v4.0 framework: [Bootstrap v4.0](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
 
@@ -19,23 +19,16 @@ The website uses HTML, CSS, and JavaScript. Most of the interface components and
 
 # Developer Manual
 ## How to Install Application & All Dependencies
-1. Clone this repository to your computer.
-2. Open the repository in VSCode or text editor of your choice.
-3. In text editor terminal, type `npm install` to install any Node.js modules.
+1. Clone this repository by selecting the green “Code” button and “Open with Github Desktop”.
+2. In Github Desktop, select “Open in Visual Studio Code” or text editor of your choice.
 
 ## How to Run Application on a Server
-1. Open the repository in VSCode or text editor of your choice.
-2. In text editor terminal, type `npm start` to boot up your local server (typically http://localhost:3000/ by default)
-3. Type `http://localhost:3000/` in a web browser to access the application.
+1. In VSCode, right-click on any of the html pages you want to view.
+2. Select “Copy path”, and paste the path into your browser.
+3. If you want to view the changes you made to the code, be sure to save the changes to the file (CTRL+S) on VSCode and then refresh the browser (CTRL+R).
 
 ## How to Run Tests for the Software
-There is no prewritten tests in this repository. Testing was mainly done through the server localhost:3000 and inspecting the page to look at the console. However, testing for this application’s API can also be done through the use of Postman, an application that links to your locally-hosted API endpoints and performs a variety of tests using GET, POST, PUT, and DELETE commands to ensure that your API endpoints are functioning correctly. To test your API endpoints in Postman, follow these steps:
-1. Start your Node.js server in the Randomize repository terminal, if you have not already done so.
-2. In Postman, navigate to the “Overview” page and create a new workspace tab.
-3. In the URL bar within your new tab, paste the address of the server you are hosting your Randomize repository on. This should look something like “http://localhost:3000/”.
-4. To test a given api route, append the url with “/api/[insert route name]”. For example, if you wanted to view the songs endpoint of the api, you would use the url “http://localhost:3000/api/songs” in Postman. Try this with a variety of different request types to make sure that your API is functioning as intended.
-5. Analyze the data returned by Postman to ensure your endpoint is functioning properly. The HTTP response code displayed in the upper right hand corner of the results panel can be helpful in diagnosing problems with endpoint connections.
-6. If everything looks good, your endpoint is working!
+There is no prewritten tests in this repository. Testing was mainly done through viewing the page locally on a browser and inspecting the page to look at the responsiveness of the website.
 
 ## Known Issues
 * The search/filter functions on resources.html page only work on the current page, but not across multiple pages.
@@ -50,15 +43,15 @@ This is a list of what needs to be improved on the current state of the website,
 * Replace stock images with content that is specifically from the community and/or university
 
 **Career Services (careerservices.html):**
-* None of the buttons are linked. Be sure to get that information
-* Contact information and office hours are filler text. Be sure to get that information
+* None of the buttons are linked. Be sure to get that information.
+* Contact information and office hours are filler text. Be sure to get that information.
 
 **Resources (resources.html):**
 * Continue to add individual resources provided by UMD Inclusive Impact (POC: Sammy Popat, David Steele)
 * Have “pagination” and/or “show more” button so that users can scroll through the resource cards
 * Change the card photos to a photo from the organization instead of using stock images
 * Add descriptions of each organization to its card that briefly describes its purpose
-* Fix the filter and search function (Both only work on resources.html, so this fix will depend on whether the team decides to implement pagination or continuous scrolling on one page (through a "Show More" button)
+* Fix the filter and search function (Both only work on resources.html, so this fix will depend on whether the team decides to implement pagination or continuous scrolling on one page (through a "Show More" button))
 
 **Find Events (findevents.html):**
 * Replace cards that have stock images with the organization’s content (Employ Prince George’s Calendar and Prince George’s Economic Development Corporation)
@@ -69,9 +62,11 @@ This is a list of what needs to be improved on the current state of the website,
 * Link each of the partners under “Our Partners” to their official website
 
 **Other Suggestions:**
+* Individual pages for each pillar with more details
 * Have the website be able to translate text into different languages, especially in Spanish
 * Update the footer to link to future social media accounts, contact information, and other details necessary
 * Add search function in the navigation bar to search through all pages, instead of just within the resources.html page
+* Include UMD IG Logo on navigation bar and as a favicon
 
 ## Previous Team Members
 **Developers**
