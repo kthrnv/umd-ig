@@ -7,6 +7,9 @@ The UMD Inclusive Impact Website is dedicated to compiling a hub of resources fo
 
 The website uses HTML, CSS, and JavaScript. Most of the interface components and screen responsiveness is handled using the Bootstrap v4.0 framework: [Bootstrap v4.0](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
 
+## File Structure
+All images, css, and js files are organized within their respective folders inside of the assets folder. The only files are that not in folders are the html pages and the main css stylesheet for quicker access.
+
 ## Target Browsers
 * iPhone 6/7/8 
 * iPhone 6/7/8 Plus
